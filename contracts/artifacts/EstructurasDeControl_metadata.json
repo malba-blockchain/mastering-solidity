@@ -1,0 +1,120 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "condicion",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "signo",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "condicion",
+						"type": "bool"
+					}
+				],
+				"name": "NotificacionDeCondicion",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "signo",
+						"type": "uint256"
+					}
+				],
+				"name": "ValorDeSigno",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "numero",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "resultado",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/EstructurasDeControl.sol": "EstructurasDeControl"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/EstructurasDeControl.sol": {
+			"keccak256": "0x319d210e0f1e608f61c70a707be02cbc14a082e98d4c6e52c10049598d703d13",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://c3e55bfce62336658d0ab79242ff2c37e55a1f021ce26be680f0cb3af22744d0",
+				"dweb:/ipfs/QmRL5T7sQWVPGMfU2DfAPdrr62BZCHcCjnpzzzFQrDfdtV"
+			]
+		}
+	},
+	"version": 1
+}

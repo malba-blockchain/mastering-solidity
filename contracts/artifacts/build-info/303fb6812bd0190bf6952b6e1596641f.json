@@ -1,0 +1,342 @@
+{
+	"id": "303fb6812bd0190bf6952b6e1596641f",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Modificadores.sol": {
+				"content": "\r\npragma solidity >=0.7.0 <0.9.0;\r\n\r\n\r\ncontract Modificadores {\r\n\r\n\r\n\r\n    \r\n}\r\n\r\n//Modificadores. Son bloques de código que permiten ejecutar código al inicio de una función\r\n    "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/Modificadores.sol": {
+				"Modificadores": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/Modificadores.sol\":39:78  contract Modificadores {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/Modificadores.sol\":39:78  contract Modificadores {\r... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220afaf028d1117f0d51958c7f81a6d8acac361e91f0928ebc10a2a13f5a9466f7664736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220afaf028d1117f0d51958c7f81a6d8acac361e91f0928ebc10a2a13f5a9466f7664736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xAF 0xAF MUL DUP14 GT OR CREATE 0xD5 NOT PC 0xC7 0xF8 BYTE PUSH14 0x8ACAC361E91F0928EBC10A2A13F5 0xA9 CHAINID PUSH16 0x7664736F6C6343000807003300000000 ",
+							"sourceMap": "39:39:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea2646970667358221220afaf028d1117f0d51958c7f81a6d8acac361e91f0928ebc10a2a13f5a9466f7664736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xAF 0xAF MUL DUP14 GT OR CREATE 0xD5 NOT PC 0xC7 0xF8 BYTE PUSH14 0x8ACAC361E91F0928EBC10A2A13F5 0xA9 CHAINID PUSH16 0x7664736F6C6343000807003300000000 ",
+							"sourceMap": "39:39:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 39,
+									"end": 78,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220afaf028d1117f0d51958c7f81a6d8acac361e91f0928ebc10a2a13f5a9466f7664736f6c63430008070033",
+									".code": [
+										{
+											"begin": 39,
+											"end": 78,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 39,
+											"end": 78,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 39,
+											"end": 78,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 39,
+											"end": 78,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 39,
+											"end": 78,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 39,
+											"end": 78,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Modificadores.sol\":\"Modificadores\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Modificadores.sol\":{\"keccak256\":\"0x6fc282ba184bbe57a745bc918bfcd4d1090dc5abd871f986698a6dcc842df851\",\"urls\":[\"bzz-raw://a26379b526b72896b7c83ae1c6dd9523424dcbdacf2fb0e23ec84fe032214715\",\"dweb:/ipfs/QmPBXitSPH3CgReYR7hzcJgc5iidgD1JBda8W34yXGwdSD\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> contracts/Modificadores.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/Modificadores.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/Modificadores.sol": {
+				"ast": {
+					"absolutePath": "contracts/Modificadores.sol",
+					"exportedSymbols": {
+						"Modificadores": [
+							2
+						]
+					},
+					"id": 3,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "2:31:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 2,
+							"linearizedBaseContracts": [
+								2
+							],
+							"name": "Modificadores",
+							"nameLocation": "48:13:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [],
+							"scope": 3,
+							"src": "39:39:0",
+							"usedErrors": []
+						}
+					],
+					"src": "2:181:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

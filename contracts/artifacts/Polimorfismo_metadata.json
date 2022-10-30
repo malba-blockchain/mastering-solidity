@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numero1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numero2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "direccionContrato",
+						"type": "address"
+					}
+				],
+				"name": "sumarDesdeContrato",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Polimorfismo.sol": "Polimorfismo"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Interface.sol": {
+			"keccak256": "0x57dd625ded798efd8d0c15de77ce343dfc71fd6d682970b03bd8d1bce999eb56",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://3a3c11704140937ffe24772578b20c044c75c6602f448eb1deb76ab48e6244ae",
+				"dweb:/ipfs/QmUZs1dsP6RagrfqWLudDkUovdB1abRVY25L13fL1yP3Xw"
+			]
+		},
+		"contracts/Polimorfismo.sol": {
+			"keccak256": "0x5afc559a43497615fb7edb8017bd74489d36820b3b7d9aabf530ec260ccd1090",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://80d137baefdbd7f73645414e65ffba8848d1c44be7ce1ed4867a9f5b0c032fe3",
+				"dweb:/ipfs/QmdDns9JC442tWjqfxXK9n5sVwKtzVQnDUF8Aij5U4wtcr"
+			]
+		}
+	},
+	"version": 1
+}

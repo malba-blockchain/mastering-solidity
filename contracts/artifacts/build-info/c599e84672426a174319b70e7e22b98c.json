@@ -1,0 +1,71 @@
+{
+	"id": "c599e84672426a174319b70e7e22b98c",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/contracts.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.7.0 <0.9.0;\r\n\r\n\r\n\r\n    //Las funciones son piezas de código que pueden ser invocadas desde otras partes del contrato o fuera del mismo\r\n    //Tienen la capacidad de retornar valores o alterar el estado del contrato\r\n    //Cuando retornan valor se les llama función. Cuando no lo hacen se les llama procedimiento\r\n\r\n    //public-private-internal-external\r\n    //view: solo lectura no modifica el estado del contrato - pure: no acceden a las variables del contrato\r\n\r\n        "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/contracts.sol": {
+				"ast": {
+					"absolutePath": "contracts/contracts.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "39:31:0"
+						}
+					],
+					"src": "39:496:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

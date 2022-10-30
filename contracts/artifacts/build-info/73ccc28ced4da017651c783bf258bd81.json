@@ -1,0 +1,71 @@
+{
+	"id": "73ccc28ced4da017651c783bf258bd81",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/TokenFungible.sol": {
+				"content": " // SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.7.0 < 0.9.0;\r\n\r\n\r\n//Tokens: SOn una representación de un elemento que tiene un valor en un contexto determinado\r\n//Esta representación tiene menos valor que el objeto original\r\n//Existen diferentes clasificaciones para los tokens\r\n\r\n//Fungibles: Son elementos reemplazables por otros con las mismas características\r\n//No fungibles: Son elementos que pueden variar de valor respecto de elementos de iguales características. No son divisibles.\r\n\r\n//ERC-20: Estandar para representar tokens fungibles\r\n//ERC-721: Estandar para representar tokens no fungibles\r\n\r\n//TokenURI: Contiene información no técnica acerca de un token\r\n\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/TokenFungible.sol": {
+				"ast": {
+					"absolutePath": "contracts/TokenFungible.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "40:32:0"
+						}
+					],
+					"src": "40:651:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numero",
+						"type": "uint256"
+					}
+				],
+				"name": "recibirSaldo",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "saldoEnviado",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Recepcion.sol": "Recepcion"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Recepcion.sol": {
+			"keccak256": "0xf005ac9d09f52a5b0afa7f9ea219c20e3cb7f527601c2dfe7e318287ae7943fe",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://b9bbdbe5b90a0b321bfd5d019431ee660d99a64e2b4b302dfaa64498c1edc217",
+				"dweb:/ipfs/QmfMd9du69PSKxLtN2pSdmmFxd9hBfuMdZ9JNVb18b8zmw"
+			]
+		}
+	},
+	"version": 1
+}

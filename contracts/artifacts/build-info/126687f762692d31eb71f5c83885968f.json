@@ -1,0 +1,71 @@
+{
+	"id": "126687f762692d31eb71f5c83885968f",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Importación.sol": {
+				"content": " // SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.7.0 < 0.9.0;\r\n\r\n\r\n//No es necesario reinventar la rueda. Tan solo es necesrio importar la librería correcta\r\n//La importación se hace con la sentencia import\r\n//Una libería no guarda estados ni variables. Solo provee utilidad\r\n//Realiza operaciones con la informacióin suministrada\r\n\r\n//En lugar de contract se usa la palabra library"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/Importación.sol": {
+				"ast": {
+					"absolutePath": "contracts/Importación.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "40:32:0"
+						}
+					],
+					"src": "40:357:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

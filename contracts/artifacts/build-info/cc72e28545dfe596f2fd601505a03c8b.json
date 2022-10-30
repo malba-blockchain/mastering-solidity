@@ -1,0 +1,71 @@
+{
+	"id": "cc72e28545dfe596f2fd601505a03c8b",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Mappings.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.7.0 <0.9.0;\r\n\r\n\r\n   \r\n   \r\n   //Mappings: Permite almacenar información en formato clave:valor y no tiene que ser el mismo tipo\r\n    //bastante util cuando tienes identificadores únicos para la información\r\n\r\n    //Enums: Tipo de dato personalizado. Una sucesión de valores creados por el usuario\r\n    //Son representados externamente por un nombre, pero internamente por un valor entero\r\n    "
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/Mappings.sol": {
+				"ast": {
+					"absolutePath": "contracts/Mappings.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "39:31:0"
+						}
+					],
+					"src": "39:417:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

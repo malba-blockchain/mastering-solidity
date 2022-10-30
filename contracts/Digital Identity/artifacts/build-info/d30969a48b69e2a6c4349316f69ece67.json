@@ -1,0 +1,580 @@
+{
+	"id": "d30969a48b69e2a6c4349316f69ece67",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Digital Identity/MyProfile.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.7.0 <0.9.0;\r\n\r\ncontract Identity {\r\n\r\n    //Información básica de contacto\r\n    struct BasicInfo {\r\n        string name;\r\n        string email;\r\n    }\r\n\r\n    struct PersonalInfo {\r\n        uint salary;\r\n        string _address;\r\n    }\r\n\r\n    enum UserType {\r\n        Basic,\r\n        Personal\r\n    }\r\n\r\n    error UserUnauthorized (address user, UserType userType);\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/Digital Identity/MyProfile.sol": {
+				"Identity": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "user",
+									"type": "address"
+								},
+								{
+									"internalType": "enum Identity.UserType",
+									"name": "userType",
+									"type": "uint8"
+								}
+							],
+							"name": "UserUnauthorized",
+							"type": "error"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/Digital Identity/MyProfile.sol\":74:427  contract Identity {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/Digital Identity/MyProfile.sol\":74:427  contract Identity {\r... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa26469706673582212200dd9a9e56aad0111f2a7d840ed24114d485108358278a90fa58837c86416d8be64736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212200dd9a9e56aad0111f2a7d840ed24114d485108358278a90fa58837c86416d8be64736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xD 0xD9 0xA9 0xE5 PUSH11 0xAD0111F2A7D840ED24114D BASEFEE MLOAD ADDMOD CALLDATALOAD DUP3 PUSH25 0xA90FA58837C86416D8BE64736F6C6343000807003300000000 ",
+							"sourceMap": "74:353:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea26469706673582212200dd9a9e56aad0111f2a7d840ed24114d485108358278a90fa58837c86416d8be64736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xD 0xD9 0xA9 0xE5 PUSH11 0xAD0111F2A7D840ED24114D BASEFEE MLOAD ADDMOD CALLDATALOAD DUP3 PUSH25 0xA90FA58837C86416D8BE64736F6C6343000807003300000000 ",
+							"sourceMap": "74:353:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 74,
+									"end": 427,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a26469706673582212200dd9a9e56aad0111f2a7d840ed24114d485108358278a90fa58837c86416d8be64736f6c63430008070033",
+									".code": [
+										{
+											"begin": 74,
+											"end": 427,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 74,
+											"end": 427,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 74,
+											"end": 427,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 74,
+											"end": 427,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 74,
+											"end": 427,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 74,
+											"end": 427,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"enum Identity.UserType\",\"name\":\"userType\",\"type\":\"uint8\"}],\"name\":\"UserUnauthorized\",\"type\":\"error\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Digital Identity/MyProfile.sol\":\"Identity\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Digital Identity/MyProfile.sol\":{\"keccak256\":\"0xf05a20dfc0e9da8d1635da8df6616d5ca96bd991d210818db5dcabf1a77ac014\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://1e49f07c0fe4d81d069c4c89d7a4a3049716bf4561639a31d9e917fb9c1a6631\",\"dweb:/ipfs/QmYgSFowpbeSVgd9y6DAvwMrJjjdR7TUJrvERRGV3iBwU2\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/Digital Identity/MyProfile.sol": {
+				"ast": {
+					"absolutePath": "contracts/Digital Identity/MyProfile.sol",
+					"exportedSymbols": {
+						"Identity": [
+							22
+						]
+					},
+					"id": 23,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "39:31:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 22,
+							"linearizedBaseContracts": [
+								22
+							],
+							"name": "Identity",
+							"nameLocation": "83:8:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "Identity.BasicInfo",
+									"id": 6,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"mutability": "mutable",
+											"name": "name",
+											"nameLocation": "176:4:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "169:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "169:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "email",
+											"nameLocation": "198:5:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "191:12:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "191:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "BasicInfo",
+									"nameLocation": "148:9:0",
+									"nodeType": "StructDefinition",
+									"scope": 22,
+									"src": "141:70:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "Identity.PersonalInfo",
+									"id": 11,
+									"members": [
+										{
+											"constant": false,
+											"id": 8,
+											"mutability": "mutable",
+											"name": "salary",
+											"nameLocation": "255:6:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 11,
+											"src": "250:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 7,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "250:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 10,
+											"mutability": "mutable",
+											"name": "_address",
+											"nameLocation": "279:8:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 11,
+											"src": "272:15:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 9,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "272:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "PersonalInfo",
+									"nameLocation": "226:12:0",
+									"nodeType": "StructDefinition",
+									"scope": 22,
+									"src": "219:76:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "Identity.UserType",
+									"id": 14,
+									"members": [
+										{
+											"id": 12,
+											"name": "Basic",
+											"nameLocation": "328:5:0",
+											"nodeType": "EnumValue",
+											"src": "328:5:0"
+										},
+										{
+											"id": 13,
+											"name": "Personal",
+											"nameLocation": "344:8:0",
+											"nodeType": "EnumValue",
+											"src": "344:8:0"
+										}
+									],
+									"name": "UserType",
+									"nameLocation": "308:8:0",
+									"nodeType": "EnumDefinition",
+									"src": "303:56:0"
+								},
+								{
+									"id": 21,
+									"name": "UserUnauthorized",
+									"nameLocation": "373:16:0",
+									"nodeType": "ErrorDefinition",
+									"parameters": {
+										"id": 20,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 16,
+												"mutability": "mutable",
+												"name": "user",
+												"nameLocation": "399:4:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 21,
+												"src": "391:12:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 15,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "391:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 19,
+												"mutability": "mutable",
+												"name": "userType",
+												"nameLocation": "414:8:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 21,
+												"src": "405:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_enum$_UserType_$14",
+													"typeString": "enum Identity.UserType"
+												},
+												"typeName": {
+													"id": 18,
+													"nodeType": "UserDefinedTypeName",
+													"pathNode": {
+														"id": 17,
+														"name": "UserType",
+														"nodeType": "IdentifierPath",
+														"referencedDeclaration": 14,
+														"src": "405:8:0"
+													},
+													"referencedDeclaration": 14,
+													"src": "405:8:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_enum$_UserType_$14",
+														"typeString": "enum Identity.UserType"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "390:33:0"
+									},
+									"src": "367:57:0"
+								}
+							],
+							"scope": 23,
+							"src": "74:353:0",
+							"usedErrors": [
+								21
+							]
+						}
+					],
+					"src": "39:388:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

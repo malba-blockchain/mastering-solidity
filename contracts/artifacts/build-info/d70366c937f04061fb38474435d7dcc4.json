@@ -1,0 +1,71 @@
+{
+	"id": "d70366c937f04061fb38474435d7dcc4",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Transferencia.sol": {
+				"content": " // SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.7.0 < 0.9.0;\r\n\r\n\r\n\r\n    //Transferencia de Ether desde un contrato\r\n    //Send:Envía un monto de ether a una dirección. Retorna false si no pudo hacerlo\r\n    //Transfer:Envía un monto de ether a una direción. Interrumpe la ejecución si no puede realizarlo\r\n    //Call: Envía un monto de Ether a una dirección y retorna el resultado de la operación\r\n \r\n    //Send y transfer requieren que las direcciones sean de tipo payable. Call no lo requiere\r\n    //Send y transfer tienen un límite de gas de 2300\r\n    //Call no tiene tope, pero se puede establecer\r\n    //Call permite llamar a funciones si la dirección especificada es un contrato\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/Transferencia.sol": {
+				"ast": {
+					"absolutePath": "contracts/Transferencia.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "40:32:0"
+						}
+					],
+					"src": "40:667:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

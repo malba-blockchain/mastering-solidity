@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "nombreNuevo",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numero1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numero2",
+						"type": "uint256"
+					}
+				],
+				"name": "Suma",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numero1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numero2",
+						"type": "uint256"
+					}
+				],
+				"name": "sumar",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Herencia.sol": "Herencia"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Herencia.sol": {
+			"keccak256": "0x6aff140e9b1432419df2a7495ef2a96a06a34ebd1c210d45e14c151eaf1a8696",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a811e605c765220d98886f2bbc87fed59bc3102327ccb91fc4d76d4abf5b3df4",
+				"dweb:/ipfs/QmYFyYVknLtJsXzuKKJ5WfnkXqco4e8zuNsP6Lk2LMfQwC"
+			]
+		},
+		"contracts/Interface.sol": {
+			"keccak256": "0x57dd625ded798efd8d0c15de77ce343dfc71fd6d682970b03bd8d1bce999eb56",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://3a3c11704140937ffe24772578b20c044c75c6602f448eb1deb76ab48e6244ae",
+				"dweb:/ipfs/QmUZs1dsP6RagrfqWLudDkUovdB1abRVY25L13fL1yP3Xw"
+			]
+		},
+		"contracts/Modificadores.sol": {
+			"keccak256": "0xab692e9b8955d241c31de1f9cd3aecb2c05878a86012425cebf3721d6c9ef03c",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a80624e8e35a76ef071013908a9d5e3e3f893defb253424792523e9e8cd93ec1",
+				"dweb:/ipfs/QmPbNdFTsPTJoDsBxHt7qSw2e3Gu7i7izvXUTqWtD7E1ui"
+			]
+		}
+	},
+	"version": 1
+}

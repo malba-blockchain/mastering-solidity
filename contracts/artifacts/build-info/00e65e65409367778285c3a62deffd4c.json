@@ -1,0 +1,85 @@
+{
+	"id": "00e65e65409367778285c3a62deffd4c",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Herencia.sol": {
+				"content": "\r\npragma solidity >=0.7.0 < 0.9.0;\r\n\r\n\r\n//HERENCIA: Reutilizar código que ya está escrito en un contrato para optimizar recursos\r\n//Solitidy no es un lenguaje orientado a objetos. Es orientado a contratos\r\n//Se indica por medio de la sentencia is.  Si un contrato tiene un constuctor con parámetros, debemos indicar\r\n//qué valores debe tomar ese constructor para poder derivarse\r\n\r\n//Override: Se indica en una función cuando esta se redefine (ya está escrita)\r\n// Para definir que una función puede ser redefinida se debe llamar virtual \r\n\r\n//Si una fución virtual no define implementación, el contrato se llama contrato abstracto\r\n\r\n//Interfaces: Definen el comportamiento que queremos que tenga un contrato. Solo contiene declaraciones y encabezados, no implementación\r\n\r\n//Super:permite llamar funciones que están escritas en el contrato anterior"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "1878",
+				"formattedMessage": "Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.\n--> contracts/Herencia.sol\n\n",
+				"message": "SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing \"SPDX-License-Identifier: <SPDX-License>\" to each source file. Use \"SPDX-License-Identifier: UNLICENSED\" for non-open-source code. Please see https://spdx.org for more information.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/Herencia.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/Herencia.sol": {
+				"ast": {
+					"absolutePath": "contracts/Herencia.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "2:32:0"
+						}
+					],
+					"src": "2:859:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

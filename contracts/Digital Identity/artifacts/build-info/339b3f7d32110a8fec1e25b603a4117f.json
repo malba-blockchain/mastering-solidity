@@ -1,0 +1,883 @@
+{
+	"id": "339b3f7d32110a8fec1e25b603a4117f",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Digital Identity/MyProfile.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.7.0 <0.9.0;\r\n\r\ncontract Identity {\r\n\r\n    //Información básica de contacto\r\n    struct BasicInfo {\r\n        string name;\r\n        string email;\r\n    }\r\n\r\n    //Información personal\r\n    struct PersonalInfo {\r\n        uint salary;\r\n        string _address;\r\n    }\r\n\r\n    //Tipos de acceso diferentes: Acceso a info básica o personal\r\n    enum UserType {\r\n        Basic,\r\n        Personal\r\n    }\r\n\r\n    error UserUnauthorized(address user, UserType userType);\r\n\r\n    BasicInfo private basicInfo;\r\n    PersonalInfo private personalInfo;\r\n    address private owner;\r\n\r\n    mapping (address => bool) private basicUsers;\r\n    mapping (address => bool) private personalUsers;\r\n    \r\n\r\n\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/Digital Identity/MyProfile.sol": {
+				"Identity": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "user",
+									"type": "address"
+								},
+								{
+									"internalType": "enum Identity.UserType",
+									"name": "userType",
+									"type": "uint8"
+								}
+							],
+							"name": "UserUnauthorized",
+							"type": "error"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/Digital Identity/MyProfile.sol\":74:744  contract Identity {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/Digital Identity/MyProfile.sol\":74:744  contract Identity {\r... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220e81baf8e9a307b887781d5dfc14590d53417f6b967b6ed1ad3c45e048767377764736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220e81baf8e9a307b887781d5dfc14590d53417f6b967b6ed1ad3c45e048767377764736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xE8 SHL 0xAF DUP15 SWAP11 ADDRESS PUSH28 0x887781D5DFC14590D53417F6B967B6ED1AD3C45E048767377764736F PUSH13 0x63430008070033000000000000 ",
+							"sourceMap": "74:670:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea2646970667358221220e81baf8e9a307b887781d5dfc14590d53417f6b967b6ed1ad3c45e048767377764736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xE8 SHL 0xAF DUP15 SWAP11 ADDRESS PUSH28 0x887781D5DFC14590D53417F6B967B6ED1AD3C45E048767377764736F PUSH13 0x63430008070033000000000000 ",
+							"sourceMap": "74:670:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 74,
+									"end": 744,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220e81baf8e9a307b887781d5dfc14590d53417f6b967b6ed1ad3c45e048767377764736f6c63430008070033",
+									".code": [
+										{
+											"begin": 74,
+											"end": 744,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 74,
+											"end": 744,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 74,
+											"end": 744,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 74,
+											"end": 744,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 74,
+											"end": 744,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 74,
+											"end": 744,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"internalType\":\"enum Identity.UserType\",\"name\":\"userType\",\"type\":\"uint8\"}],\"name\":\"UserUnauthorized\",\"type\":\"error\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Digital Identity/MyProfile.sol\":\"Identity\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Digital Identity/MyProfile.sol\":{\"keccak256\":\"0x582a0847ceb31be3f068966bdf592292e10cdf67d7c0c7a9529ca73683f86e07\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://15bba0921a3ba482e4ce6036e4c2f6f757e5d738d7b7c6bff8e66327c4df11f0\",\"dweb:/ipfs/QmXJR9qNAWTYH91wfvGmMyoPF3Bwr7XW1SXdusWp8MuDVG\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 24,
+								"contract": "contracts/Digital Identity/MyProfile.sol:Identity",
+								"label": "basicInfo",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_struct(BasicInfo)6_storage"
+							},
+							{
+								"astId": 27,
+								"contract": "contracts/Digital Identity/MyProfile.sol:Identity",
+								"label": "personalInfo",
+								"offset": 0,
+								"slot": "2",
+								"type": "t_struct(PersonalInfo)11_storage"
+							},
+							{
+								"astId": 29,
+								"contract": "contracts/Digital Identity/MyProfile.sol:Identity",
+								"label": "owner",
+								"offset": 0,
+								"slot": "4",
+								"type": "t_address"
+							},
+							{
+								"astId": 33,
+								"contract": "contracts/Digital Identity/MyProfile.sol:Identity",
+								"label": "basicUsers",
+								"offset": 0,
+								"slot": "5",
+								"type": "t_mapping(t_address,t_bool)"
+							},
+							{
+								"astId": 37,
+								"contract": "contracts/Digital Identity/MyProfile.sol:Identity",
+								"label": "personalUsers",
+								"offset": 0,
+								"slot": "6",
+								"type": "t_mapping(t_address,t_bool)"
+							}
+						],
+						"types": {
+							"t_address": {
+								"encoding": "inplace",
+								"label": "address",
+								"numberOfBytes": "20"
+							},
+							"t_bool": {
+								"encoding": "inplace",
+								"label": "bool",
+								"numberOfBytes": "1"
+							},
+							"t_mapping(t_address,t_bool)": {
+								"encoding": "mapping",
+								"key": "t_address",
+								"label": "mapping(address => bool)",
+								"numberOfBytes": "32",
+								"value": "t_bool"
+							},
+							"t_string_storage": {
+								"encoding": "bytes",
+								"label": "string",
+								"numberOfBytes": "32"
+							},
+							"t_struct(BasicInfo)6_storage": {
+								"encoding": "inplace",
+								"label": "struct Identity.BasicInfo",
+								"members": [
+									{
+										"astId": 3,
+										"contract": "contracts/Digital Identity/MyProfile.sol:Identity",
+										"label": "name",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_string_storage"
+									},
+									{
+										"astId": 5,
+										"contract": "contracts/Digital Identity/MyProfile.sol:Identity",
+										"label": "email",
+										"offset": 0,
+										"slot": "1",
+										"type": "t_string_storage"
+									}
+								],
+								"numberOfBytes": "64"
+							},
+							"t_struct(PersonalInfo)11_storage": {
+								"encoding": "inplace",
+								"label": "struct Identity.PersonalInfo",
+								"members": [
+									{
+										"astId": 8,
+										"contract": "contracts/Digital Identity/MyProfile.sol:Identity",
+										"label": "salary",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_uint256"
+									},
+									{
+										"astId": 10,
+										"contract": "contracts/Digital Identity/MyProfile.sol:Identity",
+										"label": "_address",
+										"offset": 0,
+										"slot": "1",
+										"type": "t_string_storage"
+									}
+								],
+								"numberOfBytes": "64"
+							},
+							"t_uint256": {
+								"encoding": "inplace",
+								"label": "uint256",
+								"numberOfBytes": "32"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/Digital Identity/MyProfile.sol": {
+				"ast": {
+					"absolutePath": "contracts/Digital Identity/MyProfile.sol",
+					"exportedSymbols": {
+						"Identity": [
+							38
+						]
+					},
+					"id": 39,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "39:31:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 38,
+							"linearizedBaseContracts": [
+								38
+							],
+							"name": "Identity",
+							"nameLocation": "83:8:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "Identity.BasicInfo",
+									"id": 6,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"mutability": "mutable",
+											"name": "name",
+											"nameLocation": "176:4:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "169:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "169:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "email",
+											"nameLocation": "198:5:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "191:12:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "191:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "BasicInfo",
+									"nameLocation": "148:9:0",
+									"nodeType": "StructDefinition",
+									"scope": 38,
+									"src": "141:70:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "Identity.PersonalInfo",
+									"id": 11,
+									"members": [
+										{
+											"constant": false,
+											"id": 8,
+											"mutability": "mutable",
+											"name": "salary",
+											"nameLocation": "284:6:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 11,
+											"src": "279:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 7,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "279:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 10,
+											"mutability": "mutable",
+											"name": "_address",
+											"nameLocation": "308:8:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 11,
+											"src": "301:15:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 9,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "301:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "PersonalInfo",
+									"nameLocation": "255:12:0",
+									"nodeType": "StructDefinition",
+									"scope": 38,
+									"src": "248:76:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "Identity.UserType",
+									"id": 14,
+									"members": [
+										{
+											"id": 12,
+											"name": "Basic",
+											"nameLocation": "425:5:0",
+											"nodeType": "EnumValue",
+											"src": "425:5:0"
+										},
+										{
+											"id": 13,
+											"name": "Personal",
+											"nameLocation": "441:8:0",
+											"nodeType": "EnumValue",
+											"src": "441:8:0"
+										}
+									],
+									"name": "UserType",
+									"nameLocation": "405:8:0",
+									"nodeType": "EnumDefinition",
+									"src": "400:56:0"
+								},
+								{
+									"id": 21,
+									"name": "UserUnauthorized",
+									"nameLocation": "470:16:0",
+									"nodeType": "ErrorDefinition",
+									"parameters": {
+										"id": 20,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 16,
+												"mutability": "mutable",
+												"name": "user",
+												"nameLocation": "495:4:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 21,
+												"src": "487:12:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 15,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "487:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 19,
+												"mutability": "mutable",
+												"name": "userType",
+												"nameLocation": "510:8:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 21,
+												"src": "501:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_enum$_UserType_$14",
+													"typeString": "enum Identity.UserType"
+												},
+												"typeName": {
+													"id": 18,
+													"nodeType": "UserDefinedTypeName",
+													"pathNode": {
+														"id": 17,
+														"name": "UserType",
+														"nodeType": "IdentifierPath",
+														"referencedDeclaration": 14,
+														"src": "501:8:0"
+													},
+													"referencedDeclaration": 14,
+													"src": "501:8:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_enum$_UserType_$14",
+														"typeString": "enum Identity.UserType"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "486:33:0"
+									},
+									"src": "464:56:0"
+								},
+								{
+									"constant": false,
+									"id": 24,
+									"mutability": "mutable",
+									"name": "basicInfo",
+									"nameLocation": "546:9:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 38,
+									"src": "528:27:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_struct$_BasicInfo_$6_storage",
+										"typeString": "struct Identity.BasicInfo"
+									},
+									"typeName": {
+										"id": 23,
+										"nodeType": "UserDefinedTypeName",
+										"pathNode": {
+											"id": 22,
+											"name": "BasicInfo",
+											"nodeType": "IdentifierPath",
+											"referencedDeclaration": 6,
+											"src": "528:9:0"
+										},
+										"referencedDeclaration": 6,
+										"src": "528:9:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_struct$_BasicInfo_$6_storage_ptr",
+											"typeString": "struct Identity.BasicInfo"
+										}
+									},
+									"visibility": "private"
+								},
+								{
+									"constant": false,
+									"id": 27,
+									"mutability": "mutable",
+									"name": "personalInfo",
+									"nameLocation": "583:12:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 38,
+									"src": "562:33:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_struct$_PersonalInfo_$11_storage",
+										"typeString": "struct Identity.PersonalInfo"
+									},
+									"typeName": {
+										"id": 26,
+										"nodeType": "UserDefinedTypeName",
+										"pathNode": {
+											"id": 25,
+											"name": "PersonalInfo",
+											"nodeType": "IdentifierPath",
+											"referencedDeclaration": 11,
+											"src": "562:12:0"
+										},
+										"referencedDeclaration": 11,
+										"src": "562:12:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_struct$_PersonalInfo_$11_storage_ptr",
+											"typeString": "struct Identity.PersonalInfo"
+										}
+									},
+									"visibility": "private"
+								},
+								{
+									"constant": false,
+									"id": 29,
+									"mutability": "mutable",
+									"name": "owner",
+									"nameLocation": "618:5:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 38,
+									"src": "602:21:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 28,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "602:7:0",
+										"stateMutability": "nonpayable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"visibility": "private"
+								},
+								{
+									"constant": false,
+									"id": 33,
+									"mutability": "mutable",
+									"name": "basicUsers",
+									"nameLocation": "666:10:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 38,
+									"src": "632:44:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+										"typeString": "mapping(address => bool)"
+									},
+									"typeName": {
+										"id": 32,
+										"keyType": {
+											"id": 30,
+											"name": "address",
+											"nodeType": "ElementaryTypeName",
+											"src": "641:7:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											}
+										},
+										"nodeType": "Mapping",
+										"src": "632:25:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+											"typeString": "mapping(address => bool)"
+										},
+										"valueType": {
+											"id": 31,
+											"name": "bool",
+											"nodeType": "ElementaryTypeName",
+											"src": "652:4:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bool",
+												"typeString": "bool"
+											}
+										}
+									},
+									"visibility": "private"
+								},
+								{
+									"constant": false,
+									"id": 37,
+									"mutability": "mutable",
+									"name": "personalUsers",
+									"nameLocation": "717:13:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 38,
+									"src": "683:47:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+										"typeString": "mapping(address => bool)"
+									},
+									"typeName": {
+										"id": 36,
+										"keyType": {
+											"id": 34,
+											"name": "address",
+											"nodeType": "ElementaryTypeName",
+											"src": "692:7:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											}
+										},
+										"nodeType": "Mapping",
+										"src": "683:25:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+											"typeString": "mapping(address => bool)"
+										},
+										"valueType": {
+											"id": 35,
+											"name": "bool",
+											"nodeType": "ElementaryTypeName",
+											"src": "703:4:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bool",
+												"typeString": "bool"
+											}
+										}
+									},
+									"visibility": "private"
+								}
+							],
+							"scope": 39,
+							"src": "74:670:0",
+							"usedErrors": [
+								21
+							]
+						}
+					],
+					"src": "39:705:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
