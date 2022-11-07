@@ -1,0 +1,71 @@
+{
+	"id": "248c27647b208b56b95787f103cae660",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Openzeppelin/ERC20Burnable.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\n\r\n\r\npragma solidity >=0.7.0 <0.9.0;\r\n\r\n\r\n\r\n\r\n//ESTRUCTURAS DE DATOS:\r\n//EnumerableSet: Parecido a un array. Pero para eliminar y añadir elementos no tiene que ser el ultimo. Permite validar duplicados\r\n//Recibe el set sobre el que se quiere trabajar y el valor sobre el que se quiere operar\r\n//EnumerableMap: Parecido a un mapping"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/Openzeppelin/ERC20Burnable.sol": {
+				"ast": {
+					"absolutePath": "contracts/Openzeppelin/ERC20Burnable.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "41:31:0"
+						}
+					],
+					"src": "41:327:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
