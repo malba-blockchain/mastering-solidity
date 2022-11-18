@@ -1,0 +1,71 @@
+{
+	"id": "2f4b071421e3f7486b208102aa0c1aff",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Implementacion Tokens Ethereum/Introduccion.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\n\r\npragma solidity >=0.7.0 <0.9.0;\r\n\r\n//Función transferFrom: Util en casos donde se interactúa con contratos que funcionan como vendedores\r\n//Estos no tienen forma de escuchar eventos que generan las transacciones\r\n\r\n//Ataque front running: Forma de explotar el transfer from\r\n//Se lanza una transacción que compite contra otra que está a punto de ser validada\r\n//Esta transacción se hace pagando un fee mucho más alto para poder ser validada primero\r\n//Al final se ejecuta la transacción del atacante primero y también la ultima de la victima\r\n\r\n//Funciones Increase y Decrease allowance: No asignan directamente el valor a aprobar como con aprove\r\n//Sino que aumentan o disminuyen ese valor.\r\n//Hooks: Funciones que se ejecutan antes de determinadas acciones\r\n//Para el ERC-20 hay hooks antes y despues de transferir tokens\r\n//Permiten inyectar lógica en las funciones sin necesidad de sobre escribirlas\r\n//Los tokens hijos hacen llamados de los hooks de los padres"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/Implementacion Tokens Ethereum/Introduccion.sol": {
+				"ast": {
+					"absolutePath": "contracts/Implementacion Tokens Ethereum/Introduccion.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "39:31:0"
+						}
+					],
+					"src": "39:974:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
