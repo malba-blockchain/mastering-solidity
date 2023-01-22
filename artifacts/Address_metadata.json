@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Collection of functions related to the address type",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"PlatziPunks2_flat.sol": "Address"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"PlatziPunks2_flat.sol": {
+			"keccak256": "0x69ca25577c4452b43cea5d8a8b866b1e3ff9ec451ecbe21a9c2f697ff8ed9eb2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c7936d4a1331dfd4ce2e1f779ccc663bd33aee5a2762212a5f51e4b24053116d",
+				"dweb:/ipfs/QmQzXJNHHpHJK9kW4n5k1gpCM4dr8zZbzsz5eDDCCar26r"
+			]
+		}
+	},
+	"version": 1
+}

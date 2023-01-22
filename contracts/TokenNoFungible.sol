@@ -19,3 +19,5 @@ contract TokenNoFungible is ERC721("TokenNoFungible", "TNF") {
 //ABI es lo que aparece en la carpeta artifacts
 //En el json se sube también el byte code. El cual se puede decodificar al formato original
 //Por lo tanto es vital no subir  información sensible en el código en el texto plano
+
+

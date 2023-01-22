@@ -1,0 +1,77 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "input",
+						"type": "bool"
+					}
+				],
+				"name": "YesOrNo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "counter",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Conditionals.sol": "Conditionals"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Conditionals.sol": {
+			"keccak256": "0x8b4950d2f976254700b381f9008c9d7ebff9e35e36316c0640b05399216c9d11",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://9758fb48f42ee715c390e3f209aca0050a5a1988d700dfeb87e994c8f75a92e1",
+				"dweb:/ipfs/Qmbd25ccpYp3oXXVoTuopA4DMPuCw8RR1ktgCFRzf12xXa"
+			]
+		}
+	},
+	"version": 1
+}

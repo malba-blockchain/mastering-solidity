@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "data",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getData",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_data",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					}
+				],
+				"name": "repeat",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Loops.sol": "Loops"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Loops.sol": {
+			"keccak256": "0x3e191f3357a5401574b080ababddfe3c9c0d3b722bf95c7b274432eb6d13a607",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bbaae9ef32ebfff3b8db34e3b182a17d89ecea54bf735d801201d10bdf8c0148",
+				"dweb:/ipfs/Qmao5WCo73CRiQmYGYwdUeETjtpC5a3gCVTDkRcGsoFyNE"
+			]
+		}
+	},
+	"version": 1
+}

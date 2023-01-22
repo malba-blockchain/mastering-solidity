@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "depositar",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retirar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Challenge_vulnerable.sol": "Challenge_vulnerable"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Challenge_vulnerable.sol": {
+			"keccak256": "0xa1788d434ea9034a308ff0158cc83c8c1048f79ae94d4f73c9b5879cad058eee",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://61ea86a8007d39bd29ffb05c95e1807acca3691cf58e2c172b5b07406fc68b90",
+				"dweb:/ipfs/QmeEcEtXnUQGB4GfsJRjMy63krcDbfNnAD6Bws187Vq8Y6"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,399 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint8",
+								"name": "pokemonId",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bytes16",
+								"name": "pokemonName",
+								"type": "bytes16"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct PokemonFactory.Pokemon",
+						"name": "newPokemon",
+						"type": "tuple"
+					}
+				],
+				"name": "eventNewPokemon",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes16",
+						"name": "_abilityName",
+						"type": "bytes16"
+					},
+					{
+						"internalType": "string",
+						"name": "_abilityDescription",
+						"type": "string"
+					}
+				],
+				"name": "AddAbility",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes16",
+						"name": "_typeName",
+						"type": "bytes16"
+					}
+				],
+				"name": "AddType",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes16",
+						"name": "_weaknessName",
+						"type": "bytes16"
+					}
+				],
+				"name": "AddWeakness",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_pokemonId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_abilityId",
+						"type": "uint8"
+					}
+				],
+				"name": "GiveAbilityToPokemon",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_pokemonId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_typeId",
+						"type": "uint8"
+					}
+				],
+				"name": "GiveTypeToPokemon",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_pokemonId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_weaknessId",
+						"type": "uint8"
+					}
+				],
+				"name": "GiveWeaknessToPokemon",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "allAbilities",
+				"outputs": [
+					{
+						"internalType": "bytes16",
+						"name": "abilityName",
+						"type": "bytes16"
+					},
+					{
+						"internalType": "string",
+						"name": "abilityDescription",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "allTypes",
+				"outputs": [
+					{
+						"internalType": "bytes16",
+						"name": "",
+						"type": "bytes16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "allWeaknesses",
+				"outputs": [
+					{
+						"internalType": "bytes16",
+						"name": "",
+						"type": "bytes16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_pokemonId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes16",
+						"name": "pokemonName",
+						"type": "bytes16"
+					}
+				],
+				"name": "createPokemon",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_pokemonId",
+						"type": "uint8"
+					}
+				],
+				"name": "getAbilitiesOfAPokemon",
+				"outputs": [
+					{
+						"internalType": "uint8[]",
+						"name": "",
+						"type": "uint8[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllAbilities",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes16",
+								"name": "abilityName",
+								"type": "bytes16"
+							},
+							{
+								"internalType": "string",
+								"name": "abilityDescription",
+								"type": "string"
+							}
+						],
+						"internalType": "struct PokemonFactory.Ability[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllPokemons",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint8",
+								"name": "pokemonId",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bytes16",
+								"name": "pokemonName",
+								"type": "bytes16"
+							}
+						],
+						"internalType": "struct PokemonFactory.Pokemon[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_pokemonId",
+						"type": "uint8"
+					}
+				],
+				"name": "getTypesOfAPokemon",
+				"outputs": [
+					{
+						"internalType": "uint8[]",
+						"name": "",
+						"type": "uint8[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_pokemonId",
+						"type": "uint8"
+					}
+				],
+				"name": "getWeaknessOfAPokemon",
+				"outputs": [
+					{
+						"internalType": "uint8[]",
+						"name": "",
+						"type": "uint8[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"name": "pokemonToOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "pokemons",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "pokemonId",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes16",
+						"name": "pokemonName",
+						"type": "bytes16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PokemonFactory.sol": "PokemonFactory"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/PokemonFactory.sol": {
+			"keccak256": "0xf524b9946b0daedea3aa916292e4c56a5c4c649007d8f587c202cf039e4399bd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1072c917989bb4322d75429baa7ffb7d88e5f5fc02e00c0340b24a39e2fab030",
+				"dweb:/ipfs/QmPPYStX4GVUsbaJpSh37SQoRJbEVG6q4wBghqvVYAiQXy"
+			]
+		}
+	},
+	"version": 1
+}

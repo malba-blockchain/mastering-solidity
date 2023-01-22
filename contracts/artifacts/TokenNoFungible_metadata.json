@@ -481,11 +481,11 @@
 			]
 		},
 		"contracts/TokenNoFungible.sol": {
-			"keccak256": "0x0a7dd8843ac058b3e82c504c90023b7953381fc7411298a41c068912aaea5eca",
+			"keccak256": "0x843b07a6f9a156faf10e77588750ca7b1c2fba93251a1f8faa2e78256204365f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b6a1c2aa96a6bc0f736ce7cfda5a09e61accbcc6fc8d9c8a7847fd0f621e9904",
-				"dweb:/ipfs/QmWRzjsDTcyx2PHL4xNws7Ga99JBSqaSxLhCvtLMqhf4mr"
+				"bzz-raw://f155e9e8cf528f398eb3132594d2fa8d43b7a82872b60b00513dab75f857fec4",
+				"dweb:/ipfs/QmQyTN2yBDqtDmap7gBhhyTeue5w39UwZNtraWKQS6fdCP"
 			]
 		}
 	},
