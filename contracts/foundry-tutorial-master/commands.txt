@@ -1,0 +1,23 @@
+git clone https://github.com/Vanclief/foundry-tutorial.git
+
+forge install
+
+forge build
+
+forge test -vv
+
+DEPLOY AND VERIFY ON LINUX
+
+set RPC_URL=<Your rpc url>
+set PRIVATE_KEY=<Your metamask private key>
+set ETHERSCAN_API_KEY=<Your Etherscan API Key>
+
+forge create FoundryToken --rpc-url=$RPC_URL --constructor-args 1000000000000000000 --private-key=$PRIVATE_KEY --etherscan-api-key=$ETHERSCAN_API_KEY --verify
+
+DEPLOY AND VERIFY ON WINDOWS
+forge create FoundryToken --rpc-url=<Your rpc url>--constructor-args 1000000000000000000 --private-key=<Your metamask private key> --etherscan-api-key=<Your Etherscan API Key> --verify
+
+
+https://book.getfoundry.sh/forge/writing-tests
+
+https://blog.developerdao.com/how-to-develop-and-deploy-smart-contracts-with-foundry-openzeppelin
