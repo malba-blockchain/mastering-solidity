@@ -1,0 +1,55 @@
+------------------BACKEND------------------
+
+npm install
+
+npm install --save hardhat
+
+npm install --save dev @nomicfoundation/hardhat-toolbox
+
+npm install --save-dev @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan chai ethers hardhat-gas-reporter solidity-coverage @typechain/hardhat typechain @typechain/ethers-v5 @ethersproject/abi @ethersproject/providers
+
+node --version                         ->16.18.0
+
+npx hardhat
+
+->Empty hardhat configjs
+
+CREATE SMART CONTRACT CODE .SOL
+
+CREATE TESTS IN FOLDER TEST <contractName>.js
+
+CREATE DEPLOYER SCRIPT IN FOLDER SCRIPTS deploy.js
+
+npm install dotenv
+
+npx hardhat compile
+
+npx hardhat test
+
+artifacts/countracts/<contractName>.json = Archivo ABI
+
+npx hardhat run scripts/deploy.js --network goerli
+
+npx hardhat run --network localhost scripts/deploy.js
+
+
+Counter Contract Address 0x0924E51E6F875cbD84A2C47C1a3634579c4ff83b
+
+0x2430543fc1526F6c432CBa41fFF032020d77c387
+
+
+------------------FRONTEND------------------
+
+https://docs.ethers.org/v5/getting-started/
+
+<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+
+npm i -g lite-server = SERVER TO RUN THE HTML
+
+cd src
+
+lite-server
+
+Challenge: Method set counter - define the counter at any value you want
+

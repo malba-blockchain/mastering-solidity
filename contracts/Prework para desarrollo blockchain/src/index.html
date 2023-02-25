@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DAPP</title>
+    </head>
+    <body>
+
+
+    <!--Add some buttons to be able to trigger the functions-->>
+    <div>
+        <input disabled type="text" id="counter"/> <!--Text field that will update when you click get counter-->>
+        <button onClick="increment()" type="button">Increment</button>
+        <button onClick="getCounter()" type="button">Get Counter</button>
+        <input type="number" id="newCounterValue" name="newCounterValue">
+        <button onClick="setCounter()" type="button">Submit</button>
+    </div>
+
+
+    <!--Use this code portion to import and be able to use the ethers library-->
+    <script
+        src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"
+    ></script>
+
+    <!--Use this code portion to program the interaction with smart contract from the webpage-->
+    <script>
+        //Import the contract abi
+        const CONTRACT_ABI = [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_counter",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "getCounter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_counter",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCounter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ];
+        
+        //Address of the smart contract
+        const CONTRACT_ADDRESS = "0x2430543fc1526F6c432CBa41fFF032020d77c387";
+        
+        //Variables to be able to operate
+        let signer;
+        let contract;
+        
+        //Web3 provider to be able to send requests to the smart contract
+        const provider = new ethers.providers.Web3Provider(
+            window.ethereum,
+            "goerli"
+        );
+
+        //Request connected account. The signer is the account number 0 in metamask
+        provider.send("eth_requestAccounts", []).then(()=> {
+            provider.listAccounts().then(accounts => {
+                signer = provider.getSigner(accounts[0]);
+                //Specify the address, abi and signer of transactions
+                contract = new ethers.Contract(
+                    CONTRACT_ADDRESS,
+                    CONTRACT_ABI,
+                    signer
+                );
+            });
+        });
+
+        //Create functions that connect wtih the functions on the smart contract
+        async function increment()
+        {
+            await contract.increment(); //Execute the increment function
+        }
+
+        async function getCounter() {
+            const counter = await contract.getCounter(); //Execute the get counter function
+            document.getElementById("counter").value = counter; //Update the counter element in the HTML with the counter value of the smart contract
+        }
+
+        async function setCounter() {
+            const newCounterValue = document.getElementById("newCounterValue").value;
+            await contract.setCounter(newCounterValue); //Execute the set counter function
+            
+        }
+        
+    </script>
+</body>
+</html>
