@@ -1,0 +1,7 @@
+yarn add @ethersproject/bytes
+
+yarn pvm --code 0x6000600A576001600C57FE5B6001 --gasLimit 10000
+
+yarn pvm --code 0x6000600A576000600C57FE5B6001 --gasLimit 10000
+
+yarn pvm --code 0x600A6000525B600660005160019003806000526000109057 --gasLimit 10000
